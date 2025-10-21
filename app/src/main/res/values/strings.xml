@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MiApp</string>
+
+    <string name="login_welcome">Bienvenid@ 👋</string>
+    <string name="login_subtitle">Inicia sesión para continuar</string>
+    <string name="login_email_hint">Correo electrónico</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="login_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login_no_account">¿No tienes una cuenta?</string>
+    <string name="login_create_one">Crear una</string>
+
+    <string name="title_home">Panel principal</string>
+    <string name="welcome_user">Bienvenido: %1$s</string>
+    <string name="go_profile">Ir a Perfil (resultado)</string>
+    <string name="open_web">Abrir sitio web</string>
+    <string name="send_email">Enviar correo</string>
+    <string name="share_text">Compartir texto</string>
+    <string name="open_camera">Abrir Cámara</string>
+    <string name="open_map">Abrir Mapa</string>
+    <string name="open_dialer">Abrir Marcador Telefónico</string>
+    <string name="open_config">Configuración</string>
+
+    <string name="title_camera">Cámara</string>
+    <string name="btn_take_photo">Tomar foto</string>
+    <string name="btn_save_photo">Guardar Foto y ver en galeria</string>
+    <string name="desc_preview_image">Vista previa de la foto capturada</string>
+</resources>

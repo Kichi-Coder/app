@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- Manifiesto principal: permisos, features, activities, íconos y FileProvider. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permiso para usar la cámara. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Permiso para escribir en almacenamiento externo (funciona hasta Android 9 por maxSdkVersion=28). -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+
+    <!-- La app puede usar cámara, pero no es requisito para instalarla. -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- Igual con el flash: si el dispositivo no tiene, igual permite instalar. -->
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <!-- Configuración general de la aplicación (tema, íconos, backups, RTL). -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App">
+
+        <!-- Splash: primera pantalla.
+             exported=true porque arranca con MAIN/LAUNCHER.
+             noHistory=true para que no quede en el back stack.
+             screenOrientation en vertical. -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login: solo accesible desde dentro de la app (sin intent-filters). -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false">
+        </activity>
+
+        <!-- Pantallas internas (no exportadas). -->
+        <activity android:name=".HomeActivity" android:exported="false" />
+        <activity android:name=".PerfilActivity" android:exported="false" />
+        <activity android:name=".CamaraActivity" android:exported="false" />
+        <activity android:name=".ConfigActivity" android:exported="false" />
+
+        <!-- FileProvider: URIs seguras para leer/escribir archivos (ej. fotos de la cámara). -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!-- Apunta a las rutas permitidas para compartir archivos. -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ruta_archivo" />
+        </provider>
+
+    </application>
+
+</manifest>
