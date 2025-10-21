@@ -7,7 +7,7 @@
 
 * **Tecnología:** Java / Android Studio
 * **Versión Android Mínima:** API 26 (Android Oreo)
-* **Versión AGP:** [**COLOCAR VERSIÓN DE AGP AQUÍ**]
+* **Versión AGP:**
 
 ## 🛠️ Intents Implementados (8/8)
 
@@ -50,7 +50,7 @@ Estos Intents gestionan la navegación interna entre las Activities del propio p
 [Insertar Captura 4: Resultado de la captura de foto (ImageView o la Galería)]
 
 ## 📦 Entrega y Compilación
-* **Enlace al Repositorio:** [**COLOCAR ENLACE DE GITHUB AQUÍ**]
+* **Enlace al Repositorio:** 
 * **Rama de Trabajo:** `feature/intents`
 * [cite_start]**Commits:** Commits atómicos y descriptivos[cite: 37].
-* [cite_start]**APK Debug:** [Subir el archivo `app/build/outputs/apk/debug/app-debug.apk` aquí o incluir instrucciones para compilar en Android Studio][cite: 42].
+* [cite_start]**APK Debug:**
